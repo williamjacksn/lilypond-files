@@ -2,4 +2,4 @@
 *.midi
 *.pdf
 *.ps
-.vagrant
+.idea

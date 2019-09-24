@@ -38,7 +38,7 @@ EricMusic = \relative f {
     a4 c e, a2. a4 bes d, c2.
     c'4 c c	f2 a,2 c4 a d2.
     bes4 bes bes a2~( a8 g) f4 f e f2.
-    }
+}
 
 MichaelMusic = \relative f {
     \clef bass
