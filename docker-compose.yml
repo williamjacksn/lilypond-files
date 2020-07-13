@@ -2,5 +2,7 @@ version: '3'
 
 services:
   lilypond:
-    image: docker.pkg.github.com/williamjacksn/docker-lilypond/lilypond:2.18.2
-    working_dir: /data
+    image: docker.pkg.github.com/williamjacksn/docker-lilypond/lilypond:2.20.0-1
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
