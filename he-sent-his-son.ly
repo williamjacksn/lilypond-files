@@ -1,4 +1,8 @@
-\version "2.16.2"
+% He Sent His Son
+% coded by William Jackson <william@subtlecoolness.com>
+% last update 2023-03-14
+
+\version "2.24.0"
 \language "english"
 
 \paper {
@@ -20,7 +24,7 @@ MusicSoprano = \relative c'' {
     \time 3/4
     \tempo "Expressively" 4 = 85
 
-    \override MultiMeasureRest #'staff-position = #2
+    \override MultiMeasureRest.staff-position = #2
 
     R2. | R | R | R |
 
@@ -33,13 +37,13 @@ MusicSoprano = \relative c'' {
     b8\rest e,8 e[ g^\<] g[ c] | b8. g16 e4. e8 | a g fs4. e8 | ds2 ds4\! |
     e4.^\< fs8 fs[ a] | a8. b16 b4. g8 | a4. a8 b[ c] | d2.~\!^\f | d2 b4\rest |
 
-    \override BreathingSign #'text = \markup {
-        \musicglyph #"scripts.caesura.straight"
+    \override BreathingSign.text = \markup {
+        \musicglyph "scripts.caesura.straight"
     }
 
     b8\rest d,^\mf d[ g] g[ b] | b8. a16 a2 | b8\rest fs fs[ g] g[^\markup { \italic "poco rit." } a] | a4( b) \breathe g^\mp |
 
-    \revert BreathingSign #'text
+    \revert BreathingSign.text
 
     c8 c b4. a8 | d b g4. e8 | d b' b4. a8 | g2.~ |
     g4 b8\rest d,^\markup { \italic rit. } d[ a'] | a2.\fermata | a4^\p g fs | g2.~ | g2. |
@@ -63,7 +67,7 @@ MusicTenor = \relative c {
     \clef bass
     \key g \major
 
-    \override MultiMeasureRest #'staff-position = #2
+    \override MultiMeasureRest.staff-position = #2
 
     R2. | R | R | R |
 
@@ -76,13 +80,13 @@ MusicTenor = \relative c {
     d8\rest g g[ c] c[ e] | d8. b16 g4. g8 | c8 b a4. g8 | fs2 a4 |
     g4. a8 a[ a] | fs8. fs16 g4. b8 | c4. c8 c[ c] | c2.~ | c2 d,4\rest | 
 
-    \override BreathingSign #'text = \markup {
-        \musicglyph #"scripts.caesura.straight"
+    \override BreathingSign.text = \markup {
+        \musicglyph "scripts.caesura.straight"
     }
 
     d8\rest d d[ g] g[ d] | g8. e16 e2 | d8\rest ds ds[ e] e[ fs] | fs4( g) \breathe b |
 
-    \revert BreathingSign #'text
+    \revert BreathingSign.text
 
     c8 c b4. c8 | b b b4. g8 | g g g4( fs8) fs | d2.~ |
     d4 d8\rest fs e[ d] | e2( ef4\fermata) | ef4 ef ef | d2.~ | d2. |
