@@ -3,29 +3,33 @@ import pathlib
 import subprocess
 
 
+def get_source_dir():
+    return pathlib.Path().resolve() / 'src'
+
+
+def get_source_files():
+    for file in get_source_dir().iterdir():
+        if file.suffix == '.ly':
+            yield file
+
+
 def get_output_dir():
-    cwd = pathlib.Path().resolve()
-    output_dir = cwd / 'output'
+    output_dir = pathlib.Path().resolve() / 'output'
     output_dir.mkdir(exist_ok=True)
     return output_dir
 
 
 def generate_pdfs():
-    cwd = pathlib.Path().resolve()
-    print(f'Working in {cwd}')
-
-    source_dir = cwd / 'src'
     output_dir = get_output_dir()
 
     output_files = []
 
-    for file in source_dir.iterdir():
-        if file.suffix == '.ly':
-            print(f'Processing {file}')
-            subprocess.check_call(['lilypond', f'--output={output_dir}', '--silent', file])
-            output_file = output_dir / file.with_suffix('.pdf').name
-            print(f'Generated {output_file}')
-            output_files.append(output_file)
+    for file in get_source_files():
+        print(f'Processing {file}')
+        subprocess.check_call(['lilypond', f'--output={output_dir}', '--silent', file])
+        output_file = output_dir / file.with_suffix('.pdf').name
+        print(f'Generated {output_file}')
+        output_files.append(output_file)
 
     return output_files
 
