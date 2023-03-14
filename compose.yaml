@@ -1,4 +1,14 @@
 services:
+  convert:
+    entrypoint:
+      - /lilypond/bin/convert-ly
+      - --edit
+    image: ghcr.io/williamjacksn/lilypond:2.24.1
+    init: true
+    volumes:
+      - ./:/home/python/lilypond-files
+    working_dir: /home/python/lilypond-files
+
   lilypond:
     image: docker.pkg.github.com/williamjacksn/docker-lilypond/lilypond:2.20.0-1
     working_dir: /workspace
