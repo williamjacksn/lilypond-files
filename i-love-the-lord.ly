@@ -1,8 +1,8 @@
 % I Love the Lord
 % coded by William Jackson <william@subtlecoolness.com>
-% last update 2013-10-15
+% last update 2023-03-14
 
-\version "2.14.2"
+\version "2.24.0"
 \language "english"
 
 \paper {
@@ -63,7 +63,7 @@ TenorOneMusic = \relative c' {
     R R R \bar "||"
 
     \key a \major
-    \mark \markup { \musicglyph #"scripts.caesura.straight" }
+    \mark \markup { \musicglyph "scripts.caesura.straight" }
     r4^"bright, rich, brilliant" cs'^\f b cs \break
     d2. cs4
     b cs a4. b8
@@ -89,8 +89,8 @@ TenorOneMusic = \relative c' {
     a b b r8 a--
     a1\fermata
 
-    \override BreathingSign #'text = \markup {
-        \musicglyph #"scripts.caesura.straight"
+    \override BreathingSign.text = \markup {
+        \musicglyph "scripts.caesura.straight"
     }
     \breathe
     r4^\pp^"slower, very free" a g a
@@ -144,7 +144,7 @@ TenorTwoMusic = \relative c' {
     R R R
 
     \key a \major
-    \mark \markup { \musicglyph #"scripts.caesura.straight" }
+    \mark \markup { \musicglyph "scripts.caesura.straight" }
     r4 a^\f a a
     a2. a4
     gs a a4. gs8
@@ -170,8 +170,8 @@ TenorTwoMusic = \relative c' {
     <e a> q <e gs> r8 e--
     e1\fermata
 
-    \override BreathingSign #'text = \markup {
-        \musicglyph #"scripts.caesura.straight"
+    \override BreathingSign.text = \markup {
+        \musicglyph "scripts.caesura.straight"
     }
     \breathe
     r4^\pp e4 e e
@@ -180,7 +180,7 @@ TenorTwoMusic = \relative c' {
     e1
 }
 
-TenorMusic = \partcombine \TenorOneMusic \TenorTwoMusic
+TenorMusic = \partCombine \TenorOneMusic \TenorTwoMusic
 
 BassOneMusic = \relative c {
     \clef bass
@@ -238,7 +238,7 @@ BassOneMusic = \relative c {
     df1^\p\fermata
 
     \key a \major
-    \mark \markup { \musicglyph #"scripts.caesura.straight" }
+    \mark \markup { \musicglyph "scripts.caesura.straight" }
     r4 e^\f d e
     fs2. e4
     e e fs4. d8
@@ -264,8 +264,8 @@ BassOneMusic = \relative c {
     cs d d r8 cs--
     cs1\fermata
 
-    \override BreathingSign #'text = \markup {
-        \musicglyph #"scripts.caesura.straight"
+    \override BreathingSign.text = \markup {
+        \musicglyph "scripts.caesura.straight"
     }
     \breathe
     r4^\pp cs b cs
@@ -320,7 +320,7 @@ BassTwoMusic = \relative c {
     R R R
 
     \key a \major
-    \mark \markup { \musicglyph #"scripts.caesura.straight" }
+    \mark \markup { \musicglyph "scripts.caesura.straight" }
     r4 a^\f a a
     a2. a4
     d cs d4. b8
@@ -346,8 +346,8 @@ BassTwoMusic = \relative c {
     q4 q q r8 a--
     a1\fermata
 
-    \override BreathingSign #'text = \markup {
-        \musicglyph #"scripts.caesura.straight"
+    \override BreathingSign.text = \markup {
+        \musicglyph "scripts.caesura.straight"
     }
     \breathe
     r4^\pp a a a
@@ -356,7 +356,7 @@ BassTwoMusic = \relative c {
     a1
 }
 
-BassMusic = \partcombine \BassOneMusic \BassTwoMusic
+BassMusic = \partCombine \BassOneMusic \BassTwoMusic
 
 LyricsVerseOneA = \lyricmode {
     I love the Lord. In him my soul de -- lights.
