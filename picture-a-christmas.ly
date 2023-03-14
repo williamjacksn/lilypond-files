@@ -1,8 +1,8 @@
 % Picture a Christmas
 % coded by William Jackson <william@subtlecoolness.com>
-% last update 2018-03-31
+% last update 2023-03-14
 
-\version "2.18.2"
+\version "2.24.0"
 \language "english"
 
 \paper {
@@ -11,8 +11,8 @@
     bottom-margin = 0.5\in
     top-margin = 0.5\in
     right-margin = 0.5\in
-    system-system-spacing #'minimum-distance = #15
-    last-bottom-spacing #'minimum-distance = #15
+    system-system-spacing.minimum-distance = #15
+    last-bottom-spacing.minimum-distance = #15
 }
 
 \header {
