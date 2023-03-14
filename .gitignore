@@ -3,4 +3,4 @@
 *.pdf
 *.ps
 .idea
-docker-compose.override.yml
+compose.override.yaml
