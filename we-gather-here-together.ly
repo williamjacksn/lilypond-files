@@ -1,8 +1,8 @@
 % We Gather Here Together
 % coded by William Jackson <william@subtlecoolness.com>
-% last update 2019-09-24
+% last update 2023-03-14
 
-\version "2.18.2"
+\version "2.24.0"
 
 #(set-default-paper-size "letter")
 
@@ -138,7 +138,7 @@ MenWords = \lyricmode {
             \new Voice = "Soprano" <<
                 \global \SopranoMusic
             >>
-            \lyricsto "Soprano" \new Lyrics \WomenWords
+            \new Lyrics \lyricsto "Soprano" \WomenWords
         >>
         \new Staff <<
             \set Staff.instrumentName = #"Alto "
@@ -146,7 +146,7 @@ MenWords = \lyricmode {
             \new Voice = "Alto" <<
                 \global \AltoMusic
             >>
-            \lyricsto "Alto" \new Lyrics \WomenWords
+            \new Lyrics \lyricsto "Alto" \WomenWords
         >>
         \new Staff <<
             \set Staff.instrumentName = #"Tenor "
@@ -154,7 +154,7 @@ MenWords = \lyricmode {
             \new Voice = "Tenor" <<
                 \global \TenorMusic
             >>
-            \lyricsto "Tenor" \new Lyrics \MenWords
+            \new Lyrics \lyricsto "Tenor" \MenWords
         >>
         \new Staff <<
             \set Staff.instrumentName = #"Bass "
@@ -162,7 +162,7 @@ MenWords = \lyricmode {
             \new Voice = "Bass" <<
                 \global \BassMusic
             >>
-            \lyricsto "Bass" \new Lyrics \MenWords
+            \new Lyrics \lyricsto "Bass" \MenWords
         >>
     >>
 }
