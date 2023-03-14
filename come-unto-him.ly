@@ -1,8 +1,8 @@
 % Come unto Him
 % coded by William Jackson <william@subtlecoolness.com>
-% last update 2011-08-08
+% last update 2023-03-14
 
-\version "2.12.3"
+\version "2.24.0"
 
 #(set-default-paper-size "letter")
 
@@ -126,28 +126,28 @@ theWords = \lyricmode {
             \new Voice = "Eric" <<
                 \global \EricMusic
             >>
-            \lyricsto "Eric" \new Lyrics \theWords
+            \new Lyrics \lyricsto "Eric" \theWords
         >>
         \new Staff <<
             \set Staff.instrumentName = #"Michael "
             \new Voice = "Michael" <<
                 \global \MichaelMusic
             >>
-            \lyricsto "Michael" \new Lyrics \theWords
+            \new Lyrics \lyricsto "Michael" \theWords
         >>
         \new Staff <<
             \set Staff.instrumentName = #"Stephen "
             \new Voice = "Stephen" <<
                 \global \StephenMusic
             >>
-            \lyricsto "Stephen" \new Lyrics \theWords
+            \new Lyrics \lyricsto "Stephen" \theWords
         >>
         \new Staff <<
             \set Staff.instrumentName = #"William "
             \new Voice = "William" <<
                 \global \WilliamMusic
             >>
-            \lyricsto "William" \new Lyrics \theWords
+            \new Lyrics \lyricsto "William" \theWords
         >>
     >>
 }
