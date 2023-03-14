@@ -1,6 +1,3 @@
-*.log
-*.midi
-*.pdf
-*.ps
 .idea
+output
 compose.override.yaml
