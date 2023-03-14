@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   lilypond:
     image: docker.pkg.github.com/williamjacksn/docker-lilypond/lilypond:2.20.0-1
