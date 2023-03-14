@@ -1,8 +1,8 @@
 % A Wedding Song
 % coded by William Jackson <william@subtlecoolness.com>
-% last update 2013-04-30
+% last update 2023-03-14
 
-\version "2.14.2"
+\version "2.24.0"
 
 #(set-default-paper-size "letter")
 
@@ -25,7 +25,7 @@
 global = {
   \key c \major
   \partial 4
-  \override Staff.TimeSignature #'break-visibility = #end-of-line-invisible
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
 }
 
 rightHandMusic = \relative c''' {
