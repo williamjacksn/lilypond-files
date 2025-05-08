@@ -14,8 +14,10 @@ def get_source_files():
 
 
 def get_output_dir():
-    output_dir = pathlib.Path().resolve() / 'output'
+    output_dir = pathlib.Path('output').resolve()
     output_dir.mkdir(exist_ok=True)
+    output_gitignore = output_dir / '.gitignore'
+    output_gitignore.write_text('*\n', newline='\n')
     return output_dir
 
 
