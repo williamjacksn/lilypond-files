@@ -4,7 +4,7 @@ import subprocess
 
 
 def get_source_dir():
-    return pathlib.Path().resolve() / "src"
+    return pathlib.Path("src").resolve()
 
 
 def get_source_files():
