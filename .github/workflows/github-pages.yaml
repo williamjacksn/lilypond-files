@@ -30,7 +30,7 @@ jobs:
         run: sh ci/install-uv.sh
 
       - name: Build site
-        run: docker compose run --no-TTY --user="$(id -u):$(id -g)" publish
+        run: sh ci/build.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
