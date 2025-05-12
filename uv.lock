@@ -16,12 +16,12 @@ wheels = [
 
 [[package]]
 name = "lilypond"
-version = "2.24.3"
+version = "2.25.12"
 source = { registry = "https://pypi.org/simple" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c7/6d/0aee8a09d75912e6a65f45689dc804fb70e9ec0305af7a0c1a27ef248ed8/lilypond-2.24.3-0-py3-none-macosx_10_15_x86_64.whl", hash = "sha256:4340118e50c251c41caa7baaf941008c2b06019121b64c4a529679bb7779ec8d", size = 40485576, upload-time = "2023-11-20T20:37:09.187Z" },
-    { url = "https://files.pythonhosted.org/packages/8a/cb/33272f1613fdc4610fb753143e9b321741c5fa3304df1ec21e05729e1423/lilypond-2.24.3-0-py3-none-manylinux2014_x86_64.whl", hash = "sha256:9d7ffc4d211eacf8114fa135f71b51ca78c2123d036f6643a02f67e77414a175", size = 41485541, upload-time = "2023-11-20T20:37:17.44Z" },
-    { url = "https://files.pythonhosted.org/packages/62/5c/e35274e35efbb4790e7c74f01ec169a58b8117047f7fa0bf4bba5013016e/lilypond-2.24.3-0-py3-none-win_amd64.whl", hash = "sha256:1ed4ba02d25494c68e3d59024f7c1f45beeaad79f8c6f9b80c8aede6ac739010", size = 39001425, upload-time = "2023-11-20T20:37:24.902Z" },
+    { url = "https://files.pythonhosted.org/packages/62/b5/ab967fead46591193d14cceb5babf28be02c8f5333f907e46269cd97e912/lilypond-2.25.12-0-py3-none-macosx_10_15_x86_64.whl", hash = "sha256:9096134302daf82b7dd20d08b08a3199b9a6ec353ede4fb71e90a5affd8d874c", size = 42898654, upload-time = "2024-02-02T22:30:57.139Z" },
+    { url = "https://files.pythonhosted.org/packages/ea/75/63d89e71ccc5d551ad77630944f7187fe9a861410c9ac63d4f71aca0030d/lilypond-2.25.12-0-py3-none-manylinux2014_x86_64.whl", hash = "sha256:68b72d24d542b03212a44672a71314d31138d3117542cff59b28f46dd5000106", size = 43898654, upload-time = "2024-02-02T22:31:02.492Z" },
+    { url = "https://files.pythonhosted.org/packages/1a/3d/6efca969f698ce3e52428d62ff2a1587312eb6cc9e9e4bd4bd688d54edff/lilypond-2.25.12-0-py3-none-win_amd64.whl", hash = "sha256:14711d62f22ddb9d5caf048deffdffced8f4d9d10cad96c3e3b68328bdbcee6c", size = 41323146, upload-time = "2024-02-02T22:31:08.329Z" },
 ]
 
 [[package]]
@@ -36,7 +36,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "htpy", specifier = ">=25.4.2" },
-    { name = "lilypond", specifier = "<2.25" },
+    { name = "lilypond", specifier = "<2.26" },
 ]
 
 [[package]]
