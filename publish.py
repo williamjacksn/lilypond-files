@@ -1,4 +1,5 @@
 import jinja2
+import lilypond
 import pathlib
 import subprocess
 
@@ -28,7 +29,7 @@ def generate_pdfs():
 
     for file in get_source_files():
         print(f"Processing {file}")
-        subprocess.check_call(["lilypond", f"--output={output_dir}", "--silent", file])
+        subprocess.check_call(lilypond.executable(), f"--output={output_dir}", "--silent", file])
         output_file = output_dir / file.with_suffix(".pdf").name
         print(f"Generated {output_file}")
         output_files.append(output_file)
