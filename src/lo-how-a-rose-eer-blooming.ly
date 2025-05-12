@@ -2,7 +2,7 @@
 % coded by William Jackson <william@subtlecoolness.com>
 % last update 2011-04-24
 
-\version "2.12.3"
+\version "2.24.0"
 
 #(set-default-paper-size "letter")
 
