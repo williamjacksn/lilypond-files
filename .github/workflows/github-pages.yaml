@@ -26,6 +26,9 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Install uv
+        run: sh ci/install-uv.sh
+
       - name: Build site
         run: docker compose run --no-TTY --user="$(id -u):$(id -g)" publish
 
