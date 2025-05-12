@@ -1,4 +1,4 @@
-import jinja2
+import htpy
 import lilypond
 import pathlib
 import subprocess
@@ -29,7 +29,9 @@ def generate_pdfs():
 
     for file in get_source_files():
         print(f"Processing {file}")
-        subprocess.check_call([lilypond.executable(), f"--output={output_dir}", "--silent", file])
+        subprocess.check_call(
+            [lilypond.executable(), f"--output={output_dir}", "--silent", file]
+        )
         output_file = output_dir / file.with_suffix(".pdf").name
         print(f"Generated {output_file}")
         output_files.append(output_file)
@@ -38,17 +40,18 @@ def generate_pdfs():
 
 
 def render_index(output_files: list[pathlib.Path]):
-    jinja_env = jinja2.Environment(
-        autoescape=jinja2.select_autoescape(["html"]),
-        keep_trailing_newline=True,
-        loader=jinja2.FileSystemLoader("templates"),
-        trim_blocks=True,
-    )
-    index_template = jinja_env.get_template("index.html")
-    index_rendered = index_template.render(output_files=output_files)
+    index_rendered = htpy.html(lang="en")[
+        htpy.head[
+            htpy.title["LilyPond files"],
+            htpy.meta(charset="utf-8"),
+            htpy.meta(name="viewport", content="width=device-width, initial-scale=1"),
+        ],
+        htpy.body[
+            htpy.ul[(htpy.li[htpy.a(href=p.name)[p.name]] for p in output_files)]
+        ],
+    ]
     output_index = get_output_dir() / "index.html"
-    with output_index.open("w") as f:
-        f.write(index_rendered)
+    output_index.write_text(str(index_rendered))
 
 
 def main():
