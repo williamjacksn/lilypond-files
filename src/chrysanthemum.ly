@@ -14,7 +14,7 @@
   \new Staff {
     \relative {
       \numericTimeSignature
-      c'4 e g e
+      c'4\mp e g e
       b e g e
       bes e f g
       g2 f4 d8 e
@@ -24,7 +24,7 @@
       c1
       \break
 
-      c'4 e g e
+      c'4\p e g e
       b e g e
       bes e f g
       g2 f4 d8 e
@@ -33,7 +33,7 @@
       d4 c d8 c d4
       c1
 
-      c,4 e g e
+      c,4\mp e g e
       b e g e
       bes e f g
       g2 f4 d8 e
