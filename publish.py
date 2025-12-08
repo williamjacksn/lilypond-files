@@ -27,7 +27,7 @@ def generate_pdfs():
 
     output_files = []
 
-    for file in get_source_files():
+    for file in sorted(get_source_files()):
         print(f"Processing {file}")
         subprocess.check_call(
             [lilypond.executable(), f"--output={output_dir}", "--silent", file]
