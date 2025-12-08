@@ -42,7 +42,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "htpy", specifier = ">=25.12.0" },
-    { name = "lilypond", specifier = "<2.25" },
+    { name = "lilypond", specifier = ">=2.24.3,<2.25" },
     { name = "python-ly", specifier = ">=0.9.9" },
 ]
 
