@@ -9,3 +9,8 @@ dependencies = [
     "lilypond<2.25",
     "python-ly>=0.9.9",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.8",
+]
