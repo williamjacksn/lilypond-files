@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "htpy>=25.4.2",
+    "htpy>=25.12.0",
     "lilypond<2.25",
     "python-ly>=0.9.9",
 ]
