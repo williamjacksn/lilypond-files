@@ -57,11 +57,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc0781
 
 [[package]]
 name = "python-ly"
-version = "0.9.9"
+version = "0.9.10"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b6/25/d82a762b4c8f068303259f9555fe6f8725f930318a64679a6bb9ffdf21c8/python_ly-0.9.9.tar.gz", hash = "sha256:cf1780fe53d367efc1f2642cb77c57246106ea7517f8c2d1126f0a36ee26567a", size = 250048, upload-time = "2025-01-04T05:58:55.285Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/a2/c21c90a3790612521feca435e1019eae6edc6a15084aab91b13b47a7486c/python_ly-0.9.10.tar.gz", hash = "sha256:18ef058b4d0fa235768b6669041174370f553d6c84eb7a4495f95bb315e0f18a", size = 265786, upload-time = "2026-04-04T09:32:12.029Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/76/61/8d9070dd25934646aed5742bb266d24f22a9e521fc5fbbe49f080932ae9b/python_ly-0.9.9-py3-none-any.whl", hash = "sha256:393ba21016b5b19f42fd2145881cef6b30bb359d94ee8c227c2656357cb1d7b7", size = 227598, upload-time = "2025-01-04T05:58:53.069Z" },
+    { url = "https://files.pythonhosted.org/packages/4f/7b/5f246bbd2626340f8778a11f4074a4151c99c2eb818d1569336b2b85de24/python_ly-0.9.10-py3-none-any.whl", hash = "sha256:2164e705e42ebf5af511c4fd45fcc1158737bd702fd5f238420a48acd22c00f5", size = 227723, upload-time = "2026-04-04T09:32:10.177Z" },
 ]
 
 [[package]]
