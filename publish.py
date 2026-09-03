@@ -1,20 +1,22 @@
-import htpy
-import lilypond
 import pathlib
 import subprocess
+from collections.abc import Iterator
+
+import htpy
+import lilypond
 
 
-def get_source_dir():
+def get_source_dir() -> pathlib.Path:
     return pathlib.Path("src").resolve()
 
 
-def get_source_files():
+def get_source_files() -> Iterator[pathlib.Path]:
     for file in get_source_dir().iterdir():
         if file.suffix == ".ly":
             yield file
 
 
-def get_output_dir():
+def get_output_dir() -> pathlib.Path:
     output_dir = pathlib.Path("output").resolve()
     output_dir.mkdir(exist_ok=True)
     output_gitignore = output_dir / ".gitignore"
@@ -22,14 +24,14 @@ def get_output_dir():
     return output_dir
 
 
-def generate_pdfs():
+def generate_pdfs() -> list[str]:
     output_dir = get_output_dir()
 
     output_files = []
 
     for file in sorted(get_source_files()):
         print(f"Processing {file}")
-        subprocess.check_call(
+        subprocess.check_call(  # noqa: S603 -- Local paths are passed without a shell.
             [lilypond.executable(), f"--output={output_dir}", "--silent", file]
         )
         output_file = output_dir / file.with_suffix(".pdf").name
@@ -39,7 +41,7 @@ def generate_pdfs():
     return output_files
 
 
-def render_index(output_files: list[pathlib.Path]):
+def render_index(output_files: list[pathlib.Path]) -> None:
     index_rendered = htpy.html(lang="en")[
         htpy.head[
             htpy.title["LilyPond files"],
@@ -54,7 +56,7 @@ def render_index(output_files: list[pathlib.Path]):
     output_index.write_text(str(index_rendered))
 
 
-def main():
+def main() -> None:
     render_index(generate_pdfs())
 
 
